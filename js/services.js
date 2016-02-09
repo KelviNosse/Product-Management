@@ -1,7 +1,7 @@
 var app = angular.module('ProductsApp');
 
 //Temporary url
-var url = 'http://localhost:8080/api';
+var url = 'http://resources.habbobos.com/api';
 
 app.factory('Product', ($resource) => {
     return $resource(url, {} , {

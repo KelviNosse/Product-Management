@@ -7,7 +7,7 @@ app.directive('inplaceEditing', function() {
             edit:'='
         },
         controller : 'editmodeController as editCtrl',
-        template: "<div id='editTbx' class='col-xs-10 list-group-item' ng-show='edit.editMode'><input type='text' id='{{edit.id}}'  ng-model='edit.name' ng-model-options='{ getterSetter: true }' ng-keypress='editCtrl.enterEvent($event)' focus='edit.editMode' ng-blur='edit.editMode = false'></div>"    
+        template: "<div id='editTbx' class='col-xs-10 list-group-item' ng-show='edit.editMode'><input type='text' id='{{edit.Id}}'  ng-model='edit.Name' ng-model-options='{ getterSetter: true }' ng-keypress='editCtrl.enterEvent($event)' focus='edit.editMode' ng-blur='edit.editMode = false'></div>"    
     }
 });
 

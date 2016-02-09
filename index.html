@@ -47,11 +47,11 @@
                             <div id="prods" ng-repeat="product in products">
                                 <li class="col-xs-2" ng-click="edit(product)">
                                     <div class="list-group-item pull-left">
-                                        <strong> {{product.id}} </strong>
+                                        <strong> {{product.Id}} </strong>
                                     </div>
                                 </li>
                                 <li class="active col-xs-10">
-                                    <a href="#" ng-click="edit(product)" ng-hide="product.editMode" id="item" class="list-group-item">{{product.name}}
+                                    <a href="#" ng-click="edit(product)" ng-hide="product.editMode" id="item" class="list-group-item">{{product.Name}}
                                         <div class="col-xs-1 pull-right">
                                             <button class="trashcan btn btn-info btn-xs" type="button">
                                                 <i class="glyphicon glyphicon-trash" ng-click="delete($index)"></i>

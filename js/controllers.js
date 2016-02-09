@@ -7,7 +7,7 @@ app.controller('editmodeController', ['$scope', function($scope) {
     
     ctrl.enterEvent = function(event) {
             if (event.which === 13){
-                $scope.$parent.product.editMode = $scope.$parent.product.name.length === 0; 
+                $scope.$parent.product.editMode = $scope.$parent.product.Name.length === 0; 
             }
     };
 }]);
@@ -19,7 +19,7 @@ app.controller('ProductCtrl', [ '$scope', 'Product', '$timeout', ($scope, Produc
           let pIds = [];
             
           for (var i = 0; i < $scope.products.length; i++)  
-              pIds.push($scope.products[i].id);
+              pIds.push($scope.products[i].Id);
             
           return Math.max.apply(null, pIds)+1;
         };
@@ -27,7 +27,7 @@ app.controller('ProductCtrl', [ '$scope', 'Product', '$timeout', ($scope, Produc
         $scope.insert = function(name) {
             if (!name || name.length === 0) return;
             
-            $scope.products.push( { id: $scope.products.length > 0 ? genId() : 1, name: name } );
+            $scope.products.push( { Id: $scope.products.length > 0 ? genId() : 1, Name: name } );
             
             $scope.name = "";
         };

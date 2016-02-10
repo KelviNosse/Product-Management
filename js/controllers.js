@@ -53,6 +53,7 @@ app.controller('ProductCtrl', [ '$scope', 'Product', '$timeout', ($scope, Produc
     
     $scope.saveProducts = () => {
         Product.save($scope.products, $scope.triggerSavePrompt);
+	$scope.products = Product.query();
     };
 
     $scope.delete = function(index) {
